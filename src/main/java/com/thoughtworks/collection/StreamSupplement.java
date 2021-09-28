@@ -1,8 +1,8 @@
 package com.thoughtworks.collection;
 
-import org.apache.commons.lang3.NotImplementedException;
-
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StreamSupplement {
 
@@ -10,15 +10,15 @@ public class StreamSupplement {
     }
 
     public List<Integer> sortFromMaxToMin(List<Integer> numbers) {
-        throw new NotImplementedException();
+        return null;
     }
 
     public double getAverage(List<Integer> numbers) {
-        throw new NotImplementedException();
+        return 0;
     }
 
     public int getMaxValue(List<Integer> numbers) {
-        throw new NotImplementedException();
+        return 0;
     }
 
 }
