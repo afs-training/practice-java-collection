@@ -1,12 +1,11 @@
 package com.thoughtworks.collection;
 
-import org.assertj.core.data.Offset;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StreamSupplementTest {
 
@@ -18,7 +17,7 @@ public class StreamSupplementTest {
 
         List<Integer> actualSortedNumbers = new StreamSupplement().sortFromMaxToMin(numbers);
 
-        assertThat(actualSortedNumbers).isEqualTo(expectedSortedNumbers);
+        assertEquals(expectedSortedNumbers, actualSortedNumbers);
     }
 
     @Test
@@ -31,7 +30,7 @@ public class StreamSupplementTest {
 
         double actualAverage = new StreamSupplement().getAverage(numbers);
 
-        assertThat(actualAverage).isEqualTo(expectedAverage, Offset.offset(0.0001));
+        assertEquals(expectedAverage, actualAverage);
     }
 
     @Test
@@ -42,6 +41,6 @@ public class StreamSupplementTest {
 
         int actualMaxValue = new StreamSupplement().getMaxValue(numbers);
 
-        assertThat(actualMaxValue).isEqualTo(expectedMaxValue);
+        assertEquals(expectedMaxValue, actualMaxValue);
     }
 }

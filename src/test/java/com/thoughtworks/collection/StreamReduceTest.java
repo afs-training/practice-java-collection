@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StreamReduceTest {
 
@@ -18,7 +18,7 @@ public class StreamReduceTest {
 
         int actualLastOdd = new StreamReduce().getLastOdd(numbers);
 
-        assertThat(actualLastOdd).isEqualTo(expectedLastOdd);
+        assertEquals(expectedLastOdd, actualLastOdd);
     }
 
     @Test
@@ -29,7 +29,7 @@ public class StreamReduceTest {
 
         String actualLongestWord = new StreamReduce().getLongest(words);
 
-        assertThat(actualLongestWord).isEqualTo(expectedLongestWord);
+        assertEquals(expectedLongestWord, actualLongestWord);
     }
 
     @Test
@@ -40,6 +40,6 @@ public class StreamReduceTest {
 
         int actualTotalLength = new StreamReduce().getTotalLength(words);
 
-        assertThat(actualTotalLength).isEqualTo(expectedTotalLength);
+        assertEquals(expectedTotalLength, actualTotalLength);
     }
 }

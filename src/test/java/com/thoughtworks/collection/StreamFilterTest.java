@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class StreamFilterTest {
@@ -18,7 +18,7 @@ public class StreamFilterTest {
 
         List<Integer> actualNumbers = new StreamFilter().filterEven(numbers);
 
-        assertThat(actualNumbers).isEqualTo(expectedNumbers);
+        assertEquals(expectedNumbers, actualNumbers);
     }
 
     @Test
@@ -29,7 +29,7 @@ public class StreamFilterTest {
 
         List<String> actualWords = new StreamFilter().filterEndWithS(words);
 
-        assertThat(actualWords).isEqualTo(expectedWords);
+        assertEquals(expectedWords, actualWords);
     }
 
     @Test
@@ -46,7 +46,7 @@ public class StreamFilterTest {
 
         List<Integer> actualNumbers = new StreamFilter().getCommonElements(firstNumbers, secondNumbers);
 
-        assertThat(actualNumbers).isEqualTo(expectedNumbers);
+        assertEquals(expectedNumbers, actualNumbers);
     }
 
 }

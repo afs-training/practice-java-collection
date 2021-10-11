@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StreamMapTest {
     @Test
@@ -17,7 +17,7 @@ public class StreamMapTest {
 
         List<Integer> actualNumbers = new StreamMap().getTriple(numbers);
 
-        assertThat(actualNumbers).isEqualTo(expectedNumbers);
+        assertEquals(expectedNumbers, actualNumbers);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class StreamMapTest {
 
         List<String> actualLetters = new StreamMap().mapLetter(numbers);
 
-        assertThat(actualLetters).isEqualTo(expectedLetters);
+        assertEquals(expectedLetters, actualLetters);
     }
 
     @Test
@@ -39,6 +39,6 @@ public class StreamMapTest {
 
         List<Integer> actualLengths = new StreamMap().mapLength(words);
 
-        assertThat(actualLengths).isEqualTo(expectedLengths);
+        assertEquals(expectedLengths, actualLengths);
     }
 }
